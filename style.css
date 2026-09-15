@@ -1,0 +1,444 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    background-color: #12372A;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    font-size: 26px;
+}
+
+.logo p {
+    font-size: 14px;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #FFD700;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 600px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("images/maharashtra.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 750px;
+    padding: 30px;
+}
+
+.hero h2 {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+/* ================= BUTTON ================= */
+
+.button {
+    display: inline-block;
+
+    background-color: #E67E22;
+    color: white;
+
+    padding: 12px 25px;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #C0392B;
+    transform: scale(1.05);
+}
+
+
+/* ================= SECTIONS ================= */
+
+section {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: #12372A;
+}
+
+section > p {
+    max-width: 800px;
+    margin: 10px auto;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+    background-color: white;
+}
+
+
+/* ================= TOURIST CARDS ================= */
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+    margin-top: 40px;
+}
+
+.card {
+    width: 300px;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    color: #E67E22;
+    margin-bottom: 10px;
+}
+
+.card-content a {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: #C0392B;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+/* ================= FORTS ================= */
+
+.fort-section {
+    background-color: #e9f0ec;
+}
+
+.fort-container {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+    margin-top: 35px;
+}
+
+.fort-card {
+    background-color: white;
+
+    width: 280px;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+
+    transition: 0.3s;
+}
+
+.fort-card:hover {
+    transform: translateY(-8px);
+}
+
+.fort-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.fort-card h3 {
+    color: #12372A;
+    margin-bottom: 10px;
+}
+
+
+/* ================= FOOD ================= */
+
+.food-list {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    margin-top: 30px;
+}
+
+.food-list div {
+    background-color: white;
+
+    width: 230px;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s;
+}
+
+.food-list div:hover {
+    transform: scale(1.05);
+}
+
+.food-list h3 {
+    color: #E67E22;
+    margin-bottom: 10px;
+}
+
+
+/* ================= GALLERY ================= */
+
+.gallery-section {
+    background-color: white;
+}
+
+.gallery {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 20px;
+
+    margin-top: 30px;
+}
+
+.gallery img {
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+
+/* ================= VIDEO ================= */
+
+.video-section {
+    background-color: #e9f0ec;
+}
+
+.video-section iframe {
+    max-width: 100%;
+
+    margin-top: 25px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ================= TRAVEL TIPS ================= */
+
+.tips {
+    background-color: white;
+}
+
+.tips ol {
+    max-width: 600px;
+
+    margin: 25px auto;
+
+    text-align: left;
+
+    padding-left: 30px;
+}
+
+.tips li {
+    padding: 8px;
+}
+
+
+/* ================= LINKS ================= */
+
+.links {
+    background-color: #12372A;
+
+    color: white;
+}
+
+.links h2 {
+    color: white;
+}
+
+.links p {
+    margin-bottom: 25px;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact {
+    background-color: white;
+}
+
+.contact a {
+    color: #C0392B;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background-color: #0B241B;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+footer h3 {
+    margin-bottom: 8px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 15px;
+    }
+
+    nav a {
+        display: inline-block;
+
+        margin: 5px;
+    }
+
+    .hero h2 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+}
